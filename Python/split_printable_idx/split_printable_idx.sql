@@ -1,0 +1,2 @@
+CREATE OR REPLACE LIBRARY split_printable AS 'split_printable_idx.py' LANGUAGE 'Python';
+CREATE OR REPLACE TRANSFORM FUNCTION split_printable_idx AS LANGUAGE 'Python' NAME 'split_printable_idx_factory' LIBRARY split_printable fenced;
